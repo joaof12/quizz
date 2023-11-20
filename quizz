@@ -1,0 +1,193 @@
+#include <stdio.h>
+
+int main() {
+
+    int qtd_jogadores;
+        printf("Insira a quantidade de jogadores: ");
+        scanf("%d", &qtd_jogadores);
+
+        for (int i=0; i<qtd_jogadores; i++) {
+            char nome[50];
+            int pontos = 0;
+            char respostaPlayer;
+            char nivel;
+
+                printf("\nJogador %d, por favor, insira seu nome: ", i+1);
+                scanf("%s", nome);
+                printf("Bem-Vindo, %s! Escolha um nível de dificuldade para podermos começar (facil 'F', Médio 'M' ou Difícil 'D').\n", nome);
+                scanf(" %c", &nivel); 
+
+
+//perguntas de acordo com o  nivel
+             if (nivel == 'F' || nivel == 'f') {
+                //nivel fácil escolhido
+                printf("Nível fácil selecionado\n");
+
+                printf("Pergunta nº 1: Qual é a capital do Brasil?\n");
+                printf("a) Brasília\nb) Brasil\nc) São Paulo\nd) Acre\nSua Resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'a' || respostaPlayer == 'A') {
+                printf("Resposta correta! Você ganhou 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'a'.\n");
+       }
+
+// Pergunta 2
+                printf("Pergunta nº 2: Quantos planetas existem em nosso sistema solar?\n");
+                printf("a) 5\nb) 6\nc) 7\nd) 8\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+             if (respostaPlayer == 'd'|| respostaPlayer == 'D') {
+                printf("Resposta correta! Você ganhou 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'd'.\n");
+       }
+
+// Pergunta 3
+                printf("Pergunta nº 3: Quem escreveu 'Dom Quixote'?\n");
+                printf("a) Machado de Assis.\nb) Monteiro Lobato.\nc) Carlos D. de Andrade.\nd) Miguel de Cervantes.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+              if (respostaPlayer == 'd' || respostaPlayer == 'D') {
+                printf("Resposta correta! Você ganhou 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'd'.\n");
+       }
+
+    // Exibe a pontuação final
+                printf("Pontuação final: %d/3\n", pontos);
+
+   }
+             if (nivel == 'M' || nivel == 'm') {
+                printf("Nível médio selecionado.\n");
+//pergunta 1
+                printf("Pergunta nº 1: Quem inventou a lâmpada?\n");
+                printf("a) James Bowman.\nb) Alessandro Cruto.\nc) Thomas Edison.\nd) Joseph Wilson.\nSua Resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'c'|| respostaPlayer == 'C') {
+                printf("Resposta correta! Você ganhou 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'c'.\n");
+       }
+//pergunta 2
+                printf("Pergunta nº 2: Escolha uma alternativa que NÃO seja paroxítona.\n");
+                printf("a) Relatório.\nb) Árvore.\nc) Média.\nd) Extraordinário.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+            if (respostaPlayer == 'b' || respostaPlayer == 'B') {
+                printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'b'.\n");
+       }
+//pergunta 3
+                printf("Pergunta nº 3: Qual é a principal função do núcleo de uma célula?\n");
+                printf("a) Produzir energia.\nb) Síntese de proteínas.\nc) Armazenas água.\nd) Controlar atividades celulares.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'd'|| respostaPlayer == 'D') {
+                printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'd'.\n");
+       }
+//pergunta 4
+                printf("Pergunta nº 4: O que significa a sigla HTML?\n");
+                printf("a) HyperText Markup Language.\nb) HighTech Modern Language.\nc) Hyperlink and Text Markup Language.\nd) HyperTransfer Modern Logic.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'a' || respostaPlayer == 'A') {
+                printf("Resposta correta! Ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'a'.\n");
+       }
+//pergunta 5
+                printf("Pergunta nº 5: Qual é o país mais populoso do mundo?\n");
+                printf("a) Estados Unidos.\nb) China.\nc) índia.\nd) Brasil.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'c'|| respostaPlayer == 'C') {
+                printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'c'.\n");
+            }
+
+                printf("Pontuação final: %d/5\n", pontos);
+    }
+
+            if (nivel == 'd' || nivel == 'D') {
+                printf("Nível difícil selecionado.\n");
+//prtgunta 1
+
+                printf("Pergunta nº 1: Qual é a função principal dos ribossomos em uma célula?\n");
+                printf("a) Produção de energia.\nb) Síntese de proteína.\nc) Armazenamento de informação genética.\nd) Respiração celular.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'b' || respostaPlayer == 'B') {
+                printf("Resposta correta. Você ganhou 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'b'.\n");
+        }
+//pergunta 2
+                printf("Pergunta nº 2: Qual é o nome do conceito que se refere à concentração de poder em um único líder ou autoridade central?\n");
+                printf("a) Federalismo.\nb) Totalitarismo.\nc) Democracia.\nd) Oligarquia.\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'b' || respostaPlayer == 'B') {
+                printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'b'.\n");
+            }
+//pergunta 3
+                printf("pergunta nº 3: Na teoria dos conjuntos, o que representa a união de dois conjuntos?\n");
+                printf("a) O conjunto vazio.\nb) O complemento de um conjunto.\nc) A intersecção de elementos nos conjuntos.\nd) A união dos elementos em ambos os conjuntos.\nSua resposta: ");  
+                scanf(" %c", &respostaPlayer);
+
+            if (respostaPlayer == 'd' || respostaPlayer == 'D') {
+                printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'd'.\n");
+            }
+//prgunta 4
+               printf("Pergunta nº 4: Qual é o conceito matemático representado por um vetor cujo comprimento é igual a 1?\n");
+               printf("a) Vetor Ortogonal.\nb) Vetor Unitário.\nc) Vetor Linear.\nd) Vetor Nulo.\nSua resposta: ");
+               scanf(" %c", &respostaPlayer);
+            if (respostaPlayer == 'b' || respostaPlayer == 'B') {
+                printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+            pontos += 1;
+            } else {
+                printf("Resposta incorreta. A resposta correta é a letra 'b'\n");
+            }
+//pergunta 5
+                printf("Pergunta nº 5: Qual é o termo usado para descrever a expressão física de um organismo, determinada por seus genes?\n");
+                printf("a) Fenótipo\nb) Genótipo\nc) Alelo\nd) Cromossomo\nSua resposta: ");
+                scanf(" %c", &respostaPlayer);
+
+                if (respostaPlayer == 'a' || respostaPlayer == 'A') {
+                    printf("Resposta correta! Você ganhou mais 1 ponto.\n");
+                pontos += 1;
+                } else {
+                    printf("Resposta incorreta. A resposta correrta é a letra 'a'\n");
+            }
+
+                    printf("Pontuação final: %d/5\n", pontos);
+    }
+
+} // colocar as perguntas acima dessa chave
+
+    return 0;
+
+
+}
+
+
